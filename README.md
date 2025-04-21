@@ -1,89 +1,89 @@
-# Celula Project
+# Projeto Célula
 
-## Initial Setup (First Time Only)
+## Configuração Inicial (Apenas Primeira Vez)
 
-1. Create and activate virtual environment:
+1. Criar e ativar ambiente virtual:
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
 ```
 
-2. Install Python dependencies:
+2. Instalar dependências Python:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create PostgreSQL database:
-- Open pgAdmin 4
-- Create new database named 'celula_db'
-- Make sure PostgreSQL service is running
+3. Criar banco de dados PostgreSQL:
+- Abra o pgAdmin 4
+- Crie um novo banco de dados chamado 'celula_db'
+- Certifique-se que o serviço PostgreSQL está rodando
 
-4. Create/update .env file with your database credentials:
+4. Criar/atualizar arquivo .env com suas credenciais de banco de dados:
 ```
 DEBUG=True
-SECRET_KEY=your-secret-key-here
+SECRET_KEY=sua-chave-secreta-aqui
 DB_NAME=celula_db
 DB_USER=postgres
-DB_PASSWORD=your-password-here
+DB_PASSWORD=sua-senha-aqui
 DB_HOST=localhost
 DB_PORT=5432
 ```
 
-5. Run database migrations:
+5. Executar migrações do banco de dados:
 ```bash
 python manage.py migrate
 ```
 
-## Daily Startup Commands
+## Comandos para Inicialização Diária
 
-1. Start PostgreSQL Service:
-   - Open Services (services.msc)
-   - Find "postgresql-x64-17"
-   - Make sure it's running (Start if needed)
+1. Iniciar Serviço PostgreSQL:
+   - Abra Serviços (services.msc)
+   - Localize "postgresql-x64-17"
+   - Certifique-se que está rodando (Inicie se necessário)
 
-2. Activate virtual environment (if not already activated):
+2. Ativar ambiente virtual (se ainda não estiver ativado):
 ```bash
 .\venv\Scripts\activate
 ```
 
-3. Start Django development server:
+3. Iniciar servidor de desenvolvimento Django:
 ```bash
 python manage.py runserver
 ```
 
-4. Access the application:
-   - Open browser and go to: http://localhost:8000
+4. Acessar a aplicação:
+   - Abra o navegador e acesse: http://localhost:8000
 
-## Additional Commands
+## Comandos Adicionais
 
-- Create a new Django app:
+- Criar uma nova aplicação Django:
 ```bash
-python manage.py startapp app_name
+python manage.py startapp nome_da_app
 ```
 
-- Create database migrations:
+- Criar migrações do banco de dados:
 ```bash
 python manage.py makemigrations
 ```
 
-- Create a superuser (admin):
+- Criar um superusuário (admin):
 ```bash
 python manage.py createsuperuser
 ```
 
-- Run Django shell:
+- Executar shell do Django:
 ```bash
 python manage.py shell
 ```
 
-## Current Stack
+## Stack Atual
 - Python 3.13.3
 - Django 5.0.x
 - PostgreSQL 17
-- Tailwind CSS (in progress)
+- Tailwind CSS (em desenvolvimento)
 
-## Project Structure
-- `config/` - Main project configuration
-- `core/` - Core application with base templates
-- `manage.py` - Django management script
-- `requirements.txt` - Python dependencies
+## Estrutura do Projeto
+- `config/` - Configuração principal do projeto
+- `core/` - Aplicação core com templates base
+- `manage.py` - Script de gerenciamento Django
+- `requirements.txt` - Dependências Python
